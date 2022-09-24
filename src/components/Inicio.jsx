@@ -1,9 +1,27 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import { allNetworks } from '../functions/functions'
 
-const inicio = () => {
+const Inicio = () => {
+  const [networks, setNetworks] = useState(null)
+  useEffect(()=>{
+    allNetworks(setNetworks)
+
+  },[])
   return (
-    <div>inicio</div>
+    <>
+      {networks != null ? ((
+        networks.map(network => (
+          <div key={network.id}>
+            <a href="#">{network.name}</a>
+          </div>
+        ))
+      )) : ('No hay networks')}
+    
+    
+    
+    
+    </>
   )
 }
 
-export default inicio
+export default Inicio
