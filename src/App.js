@@ -1,7 +1,7 @@
 // import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Inicio from './components/Inicio'
-import Network from './components/Networks'
+import Network from './components/Network'
 
 
 

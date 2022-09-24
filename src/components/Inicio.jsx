@@ -12,7 +12,7 @@ const Inicio = () => {
       {networks != null ? ((
         networks.map(network => (
           <div key={network.id}>
-            <a href="#">{network.name}</a>
+            <a href={`/network/${network.id}`}>{network.company}</a>
           </div>
         ))
       )) : ('No hay networks')}
