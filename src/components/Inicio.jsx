@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { allNetworks } from "../functions/functions";
-
+import { Heading, Box, Flex, Text, Button, Image, Icon } from "@chakra-ui/react";
+import { GrBike } from "react-icons/gr";
+import logo from "../assets/Olga_PNG.png";
 
 const Inicio = () => {
   const [networks, setNetworks] = useState([]);
@@ -10,22 +12,32 @@ const Inicio = () => {
 
   return (
     <>
-      <h1>NETWORKS</h1>
-      {networks != null ? (
-        networks.map(network => (
-             <div key={network.id}>
-               <h2>{network.name}</h2>
-               <h3> Compañia: {network.company}</h3>
-               <h3>País: {network.location.country}</h3>    
-               <a href={`/network/stations/${network.id}`}>Stations</a>
-             </div>
-           ))
-      ): ('No se encontraron networks')}
-
-        
-
-
-        
+      <center>
+        <Heading as="h1" size="lg">
+          NETWORKS
+        </Heading>
+        <Image src={logo} width={300} m={4}></Image>
+      </center>
+      {networks != null
+        ? networks.map((network) => (
+            <Box key={network.id} bg="gray.100" p={4} m={4} borderRadius="lg">
+              <Flex>
+                <Text fontSize="2x1">
+                  <strong>{network.name} </strong>
+                  <Icon as={GrBike}/>
+                  <p>Company: {network.company}</p>
+                  <p>Country: {network.location.country} </p>
+                  <p>City: {network.location.city}</p>
+                  <a href={`/network/stations/${network.id}`}>
+                    <Button mt={2} colorScheme="purple">
+                      Stations
+                    </Button>
+                  </a>
+                </Text>
+              </Flex>
+            </Box>
+          ))
+        : "No se encontraron networks"}
     </>
   );
 };
