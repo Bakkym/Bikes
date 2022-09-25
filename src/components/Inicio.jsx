@@ -1,27 +1,32 @@
-import React, {useEffect, useState} from 'react'
-import { allNetworks } from '../functions/functions'
+import React, { useEffect, useState } from "react";
+import { allNetworks } from "../functions/functions";
+
 
 const Inicio = () => {
-  const [networks, setNetworks] = useState(null)
-  useEffect(()=>{
-    allNetworks(setNetworks)
+  const [networks, setNetworks] = useState([]);
+  useEffect(() => {
+    allNetworks(setNetworks);
+  }, []);
 
-  },[])
   return (
     <>
-      {networks != null ? ((
-        networks.map(network => (
-          <div key={network.id}>
-            <a href={`/network/${network.id}`}>{network.company}</a>
-          </div>
-        ))
-      )) : ('No hay networks')}
-    
-    
-    
-    
-    </>
-  )
-}
+      <h1>NETWORKS</h1>
+       {networks.map((network) => (
+            <div key={network.id}>
+              <h2>{network.name}</h2>
+              <h3> Compañia: {network.company}</h3>
+              <h3>País: {network.location.country}</h3>
+              
 
-export default Inicio
+
+              <a href={`/network/stations/${network.id}`}>Stations</a>
+            </div>
+          ))} 
+
+
+        
+    </>
+  );
+};
+
+export default Inicio;

@@ -11,7 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Inicio></Inicio>}></Route>
-          <Route path='/network/:id' element={<Network></Network>}></Route>
+          <Route path='/network/stations/:id' element={<Network></Network>}></Route>
+
         </Routes>
 
       </BrowserRouter>
