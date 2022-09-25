@@ -11,17 +11,18 @@ const Inicio = () => {
   return (
     <>
       <h1>NETWORKS</h1>
-       {networks.map((network) => (
-            <div key={network.id}>
-              <h2>{network.name}</h2>
-              <h3> Compañia: {network.company}</h3>
-              <h3>País: {network.location.country}</h3>
-              
+      {networks != null ? (
+        networks.map(network => (
+             <div key={network.id}>
+               <h2>{network.name}</h2>
+               <h3> Compañia: {network.company}</h3>
+               <h3>País: {network.location.country}</h3>    
+               <a href={`/network/stations/${network.id}`}>Stations</a>
+             </div>
+           ))
+      ): ('No se encontraron networks')}
 
-
-              <a href={`/network/stations/${network.id}`}>Stations</a>
-            </div>
-          ))} 
+        
 
 
         
