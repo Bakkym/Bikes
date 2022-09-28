@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Bikes/static/css/main.417ac7b6.css",
+    "main.js": "/Bikes/static/js/main.8602c347.js",
+    "static/media/R.png": "/Bikes/static/media/R.fb5e87e631c63510a061.png",
+    "static/media/Olga_PNG.png": "/Bikes/static/media/Olga_PNG.f22acf8d035955acbdca.png",
+    "index.html": "/Bikes/index.html",
+    "main.417ac7b6.css.map": "/Bikes/static/css/main.417ac7b6.css.map",
+    "main.8602c347.js.map": "/Bikes/static/js/main.8602c347.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.417ac7b6.css",
+    "static/js/main.8602c347.js"
+  ]
+}

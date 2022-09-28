@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.417ac7b6.css","mappings":"AAAA,OACE,YAAa,CACb,cAEF","sources":["components/Inicio.css"],"sourcesContent":[".cards{\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n\r\n}\r\n\r\n\r\n"],"names":[],"sourceRoot":""}
