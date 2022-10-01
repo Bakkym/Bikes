@@ -38,7 +38,7 @@ const Inicio = () => {
                 m='8'
                 borderRadius="lg"
                 width="30rem"
-                bg='gray.100'
+                bg='gray.200'
               >
                 <Flex>
                   <text >
