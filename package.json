@@ -2,7 +2,6 @@
   "name": "bikes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://bakkym.github.io/Bikes",
   "dependencies": {
     "@chakra-ui/react": "^2.3.4",
     "@emotion/react": "^11.10.4",

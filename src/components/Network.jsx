@@ -23,20 +23,23 @@ const Network = () => {
   return (
     <>
       <center>
-        <Heading as="h1" size="lg">
-          STATIONS
+        <Heading as="h1" size="4xl" fontFamily="fantasy" >
+          {(`${params.id} STATIONS`).toUpperCase()}
         </Heading>
         <Image src={logo} width={300} m={4}></Image>
       </center>
-      <Box bg="green.200">
-        <Text fontSize="4xl" fontFamily="monospace" p={4}>
-          <p>Bicicletas totales: {countB}</p>
-          <p>Espacios totales: {countE}</p>
+      <Box bg="green.200" >
+        <Flex>
+        <Text fontSize="4xl" fontFamily="serif" p={4}>
+          <p>Bicicletas Disponibles: {countB}</p>
+          <p>Espacios Disponibles: {countE}</p>
         </Text>
+
+        </Flex>
       </Box>
       {network != null
         ? network.stations.map((station) => (
-            <Box key={station.name} bg="gray.100" p={4} m={4} borderRadius="lg">
+            <Box key={station.name} bg="gray.200" p={4} m={4} borderRadius="lg">
               <strong>{station.name}</strong>
               <p>Fecha actualización: {station.timestamp}</p>
               {station.free_bikes || station.empty_slots != null ? (
